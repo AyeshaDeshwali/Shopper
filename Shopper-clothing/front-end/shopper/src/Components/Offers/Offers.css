@@ -1,6 +1,5 @@
 .offers {
   width: 65%;
-  /* height: 65vh; */
   display: flex;
   margin: auto;
   padding: 0px 140px;
@@ -44,6 +43,68 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 50px;
+}
+
+.offers-right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .offers {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .offers-left h1 {
+    font-size: 50px;
+  }
+
+  .offers-left p {
+    font-size: 18px;
+  }
+
+  .offers-left button {
+    width: 250px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .offers-right {
+    justify-content: center;
+  }
+
+  .offers-right img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .offers {
+    width: 93%;
+    padding: 30px 10px;
+  }
+
+  .offers-left h1 {
+    font-size: 35px;
+  }
+
+  .offers-left p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .offers-left button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    margin-left: 30px;
+  }
 }
