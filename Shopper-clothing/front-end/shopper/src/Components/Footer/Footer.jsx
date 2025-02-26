@@ -39,7 +39,7 @@ function Footer() {
       </div>
       <div className="footer-copyright">
         <hr />
-        <p>Copyright # 2025 - All Right Reserved.</p>
+        <p>© Crafted with ❤️ by Ayesha | All Rights Reserved.</p>
       </div>
     </div>
   );
