@@ -8,7 +8,7 @@ function CartItems() {
 
   return (
     <div className="cartitems">
-      <div className="cartitems-format-main">
+      <div className="cartitems-main cartitems-format-main">
         <p>Products</p>
         <p>Title</p>
         <p>Price</p>
