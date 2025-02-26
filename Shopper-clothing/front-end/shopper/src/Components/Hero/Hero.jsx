@@ -17,17 +17,19 @@ const Hero = () => {
           <p>for everyone</p>
         </div>
         <div className="hero-latest-btn">
-          <div style={{ marginLeft: "20px" }}>Letest Collection</div>
+          <div>
+            {" "}
+            <h4> Letest Collection </h4>
+          </div>
           <img
+            className="right-icon-in-btn"
             src="https://www.pngall.com/wp-content/uploads/13/White-Arrow-PNG-Pic.png"
-            style={{ width: "100px", marginRight: "-22px" }}
             alt=""
           />
         </div>
       </div>
       <div className="hero-right">
         <img
-          style={{ width: "480px", height: "480px", marginTop: "-100px" }}
           src="https://clipart-library.com/image_gallery2/Shopping-Download-PNG.png"
           alt=""
         />
