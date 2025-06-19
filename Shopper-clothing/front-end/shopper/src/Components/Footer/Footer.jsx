@@ -4,8 +4,12 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img
+        {/* <img
           src="https://t3.ftcdn.net/jpg/05/06/75/80/360_F_506758046_vb98YfQhYf6RmwPkgQQH80qPSIoNMYyW.jpg"
+          alt=""
+        /> */}
+        <img
+          src="https://png.pngtree.com/png-clipart/20240902/original/pngtree-shopping-bag-logo-for-the-web-vector-png-image_15916011.png"
           alt=""
         />
         <p>SHOPPER</p>
