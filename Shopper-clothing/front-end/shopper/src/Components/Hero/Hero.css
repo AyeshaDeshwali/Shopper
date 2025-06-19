@@ -1,7 +1,13 @@
+/* ================= Base Styles ================= */
 .hero {
-  height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 80px;
+  gap: 50px;
 }
 
 .hero-left {
@@ -10,19 +16,19 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-left: 180px;
+  padding-left: 100px;
   line-height: 1.1;
 }
 
 .hero-left h2 {
   color: #090909;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
 }
 
 .hero-left p {
   color: #171717;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: 700;
 }
 
@@ -32,15 +38,16 @@
   gap: 20px;
 }
 .hero-hand-icon img {
-  width: 105px;
+  width: 90px;
 }
+
 .hero-latest-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  width: 310px;
-  height: 70px;
+  width: 290px;
+  height: 65px;
   border-radius: 75px;
   margin-top: 30px;
   background-color: #ff4141;
@@ -49,16 +56,24 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.hero-latest-btn:hover {
+  background-color: #d93434;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
 .hero-latest-btn h4 {
   font-weight: 500;
 }
+
 .hero-latest-btn img {
-  height: 60px;
-  width: 60px;
-  right: -5px;
+  height: 50px;
+  width: 50px;
   position: relative;
-  right: -10px;
+  right: -8px;
 }
+
 .hero-right {
   flex: 1;
   display: flex;
@@ -66,25 +81,35 @@
   justify-content: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  margin-top: -40px;
+}
+
+/* ================= Extra Large Screens (4K etc.) ================= */
+@media (min-width: 1800px) {
+  .hero-left p {
+    font-size: 100px;
+  }
+
+  .hero-hand-icon img {
+    width: 120px;
+  }
+
+  .hero-right img {
+    width: 600px;
+  }
+}
+
+/* ================= Laptop & Tablets ================= */
+@media (max-width: 1200px) {
   .hero {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding: 50px 20px;
+    padding: 50px 40px;
   }
 
   .hero-left {
-    padding-left: 0;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .hero-left h2 {
-    font-size: 24px;
+    padding-left: 40px;
   }
 
   .hero-left p {
@@ -92,7 +117,7 @@
   }
 
   .hero-hand-icon img {
-    width: 90px;
+    width: 70px;
   }
 
   .hero-latest-btn {
@@ -101,59 +126,110 @@
     font-size: 18px;
   }
 
+  .hero-latest-btn img {
+    height: 40px;
+    width: 40px;
+  }
+
   .hero-right img {
-    width: 400px;
-    height: 400px;
+    width: 320px;
     margin-top: 0;
   }
 }
 
-@media (max-width: 360px) {
+/* ================= Tablet View ================= */
+@media (max-width: 768px) {
   .hero {
-    padding: 20px 10px;
-    margin-top: 65px;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .hero-left {
+    padding: 0;
+    align-items: center;
   }
 
   .hero-left h2 {
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 22px;
+  }
+
+  .hero-left p {
+    font-size: 48px;
+  }
+
+  .hero-hand-icon {
+    justify-content: center;
+  }
+
+  .hero-hand-icon img {
+    width: 55px;
+  }
+
+  .hero-latest-btn {
+    width: 200px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .hero-latest-btn img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-right img {
+    width: 250px;
+  }
+}
+
+/* ================= Mobile View ================= */
+@media (max-width: 500px) {
+  .hero {
+    padding: 20px 10px;
+    gap: 25px;
   }
 
   .hero-left p {
     font-size: 35px;
-    margin-top: 10px;
+  }
+
+  .hero-left h2 {
+    font-size: 18px;
   }
 
   .hero-hand-icon img {
-    width: 45px;
-    position: absolute;
-    right: 112px;
-    top: 135px;
-  }
-
-  .hero-hand-icon p {
-    margin-left: 45px;
+    width: 40px;
   }
 
   .hero-latest-btn {
-    width: 225px;
+    width: 180px;
     height: 45px;
-    color: white;
-    font-size: 20px;
+    font-size: 14px;
   }
-  .hero-latest-btn h4 {
-    margin-right: 30px;
-    font-weight: 500;
-  }
+
   .hero-latest-btn img {
-    height: 40px;
-    position: absolute;
-    width: 40px;
-    right: 70px;
+    width: 28px;
+    height: 28px;
   }
+
   .hero-right img {
-    width: 250px;
-    height: 250px;
-    margin-top: 20px;
+    width: 200px;
+  }
+}
+
+/* ================= Smallest Devices ================= */
+@media (max-width: 360px) {
+  .hero-left p {
+    font-size: 28px;
+  }
+
+  .hero-hand-icon img {
+    width: 30px;
+  }
+
+  .hero-latest-btn {
+    width: 160px;
+    height: 42px;
   }
 }
