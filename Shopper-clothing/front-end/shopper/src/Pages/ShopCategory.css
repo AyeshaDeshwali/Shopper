@@ -1,19 +1,25 @@
-/* Main Styles */
+/* ---------- Banner Styles ---------- */
 .shopcategory-banner {
   display: block;
   margin: 30px auto;
-  width: 82%;
+  width: 85%;
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
-  margin-top: 160px;
 }
 
+/* ---------- Index + Sort Section ---------- */
 .shopcategory-indexSort {
   display: flex;
-  margin: 0px 170px;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.shopcategory-indexSort p span {
+  font-weight: 600;
 }
 
 .shopcategory-sort {
@@ -24,24 +30,31 @@
   border-radius: 40px;
   border: 1px solid #888;
   gap: 8px;
+  cursor: pointer;
 }
 
-.shopcategory-indexSort p span {
-  font-weight: 600;
-}
-
+/* ---------- Product Grid ---------- */
 .shopcategory-products {
-  margin: 20px 170px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 70px;
+  /* padding: 20px; */
+  margin: 30px auto;
+  max-width: 1200px;
 }
 
+/* Optional wrapper if you want each card in its own block (use in JSX if needed) */
+.item-products {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Load More Button ---------- */
 .shopcategory-loadmore {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 150px auto;
+  margin: 60px auto 80px auto;
   width: 233px;
   height: 69px;
   border-radius: 75px;
@@ -52,65 +65,79 @@
   cursor: pointer;
 }
 
-/* Responsive Design */
-
-@media (max-width: 1200px) {
-  .shopcategory-products {
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 20px 100px;
-  }
-
-  .shopcategory-indexSort {
-    margin: 0px 100px;
-  }
-}
-
-@media (max-width: 768px) {
-  .shopcategory-products {
-    grid-template-columns: 1fr 1fr;
-    margin: 20px 50px;
-  }
-
-  .shopcategory-indexSort {
-    margin: 0px 50px;
-    flex-direction: row;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 360px) {
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
   .shopcategory-banner {
-    height: 135px;
-    border-radius: 10px;
-    margin-top: 80px;
-  }
-
-  .shopcategory-products {
-    grid-template-columns: 1fr;
-    margin: 20px;
-    margin-bottom: 30px;
+    width: 90%;
+    height: 300px;
   }
 
   .shopcategory-indexSort {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 20px;
+    padding: 0 30px;
+  }
+
+  .shopcategory-products {
+    /* gap: 30px; */
+    padding: 20px 30px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .shopcategory-banner {
+    height: 220px;
+  }
+
+  .shopcategory-indexSort {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
-    margin-left: 30%;
-    margin-bottom: 50px;
+    padding: 0 20px;
   }
+
   .shopcategory-sort {
-    padding: 6px;
-    width: 100px;
-    margin-left: 20px;
+    padding: 5px 16px;
   }
+
+  .shopcategory-indexSort {
+    flex-direction: row;
+    /* padding: 0 30px; */
+  }
+  .shopcategory-products {
+    padding: 20px;
+    /* gap: 24px; */
+  }
+}
+
+/* ---------- Extra Small Devices ---------- */
+@media (max-width: 480px) {
+  .shopcategory-banner {
+    height: 180px;
+    width: 92%;
+    margin: 20px auto;
+  }
+
+  .shopcategory-indexSort {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
   .shopcategory-indexSort p {
-    display: none;
+    font-size: 14px;
+    text-align: center;
   }
+
+  .shopcategory-sort {
+    padding: 6px 0px;
+    width: 120px;
+    justify-content: center;
+  }
+
   .shopcategory-sort img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .shopcategory-loadmore {
@@ -118,10 +145,5 @@
     height: 50px;
     font-size: 16px;
     margin-top: 20px;
-    margin-bottom: 50px;
-  }
-
-  .item-products {
-    margin-top: -30px;
   }
 }
