@@ -1,6 +1,6 @@
 .newletter {
   width: 65%;
-  height: 40vh;
+  /* height: 40vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,8 @@
   margin-bottom: 150px;
   background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
   gap: 30px;
+  border-radius: 20px;
+  padding-top: 20px;
 }
 
 .newletter h1 {
