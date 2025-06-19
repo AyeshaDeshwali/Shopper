@@ -1,5 +1,5 @@
 .item {
-  width: 350px;
+  /* width: 350px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +37,7 @@
 
 .item img {
   height: 450px;
-  width: 330px;
+  width: 292px;
   border-radius: 10px;
 }
 
