@@ -84,6 +84,7 @@
     width: 230px;
     height: 55px;
     font-size: 18px;
+    margin-left: 50px;
   }
 
   .offers-right img {
@@ -114,6 +115,7 @@
     width: 200px;
     height: 50px;
     font-size: 16px;
+    margin-left: 30px;
   }
 
   .offers-right img {
