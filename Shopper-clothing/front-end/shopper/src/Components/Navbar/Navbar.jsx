@@ -1,84 +1,62 @@
 import React, { useContext, useState } from "react";
 import "./Navbar.css";
-// import logo from "../Assets/logo.png";
-// import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("shop");
   const [menuOpen, setMenuOpen] = useState(false);
-
   const { getTotalCartItems } = useContext(ShopContext);
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   return (
-    <div className="navbar">
-      <div className="nav-logo">
-        <img
-          src="https://t3.ftcdn.net/jpg/05/06/75/80/360_F_506758046_vb98YfQhYf6RmwPkgQQH80qPSIoNMYyW.jpg"
-          alt="logo"
-        />
-        <p>SHOPPER</p>
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="nav-left">
+        <Link to="/" className="logo">
+          {/* <img
+            src="https://www.svgrepo.com/show/217771/shopping-logo.svg"
+            alt="Logo"
+          /> */}
+          <img
+            src="https://png.pngtree.com/png-clipart/20240902/original/pngtree-shopping-bag-logo-for-the-web-vector-png-image_15916011.png"
+            alt=""
+          />
+          <span>SHOPPER</span>
+        </Link>
       </div>
-      <div className="menu-icon" onClick={toggleMenu}>
+
+      {/* Hamburger */}
+      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         <i className={`fa-solid ${menuOpen ? "fa-xmark" : "fa-bars"}`}></i>
       </div>
 
-      <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
-        <li
-          onClick={() => {
-            setMenu("shop");
-            setMenuOpen(false);
-          }}
-        >
-          <Link to="/">Shop</Link>
-          {menu === "shop" && <hr />}
-        </li>
-        <li
-          onClick={() => {
-            setMenu("mens");
-            setMenuOpen(false);
-          }}
-        >
-          <Link to="/mens">Men</Link>
-          {menu === "mens" && <hr />}
-        </li>
-        <li
-          onClick={() => {
-            setMenu("womens");
-            setMenuOpen(false);
-          }}
-        >
-          <Link to="/womens">Women</Link>
-          {menu === "womens" && <hr />}
-        </li>
-        <li
-          onClick={() => {
-            setMenu("kids");
-            setMenuOpen(false);
-          }}
-        >
-          <Link to="/kids">Kids</Link>
-          {menu === "kids" && <hr />}
-        </li>
-      </ul>
+      {/* Nav Links */}
+      <div className={`nav-center ${menuOpen ? "open" : ""}`}>
+        {["shop", "mens", "womens", "kids"].map((item) => (
+          <Link
+            key={item}
+            to={`/${item === "shop" ? "" : item}`}
+            onClick={() => setMenuOpen(false)}
+            className="nav-link"
+          >
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+          </Link>
+        ))}
+      </div>
 
-      <div className="nav-login-cart">
+      {/* Login & Cart */}
+      <div className="nav-right">
         <Link to="/login">
-          <button>Login</button>
+          <button className="login-btn">Login</button>
         </Link>
-        <Link to="/cart">
+        <Link to="/cart" className="cart-icon">
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/001/504/962/small/shopping-cart-icon-free-vector.jpg"
             alt="cart"
           />
+          <span className="cart-count">{getTotalCartItems()}</span>
         </Link>
-        <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
-    </div>
+    </nav>
   );
 };
 
