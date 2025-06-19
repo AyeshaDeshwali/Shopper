@@ -1,14 +1,3 @@
-// import p2_img from "./2.jpg";
-// import p3_img from "./3.jpg";
-// import p4_img from "./4.jpg";
-// import p5_img from "./5.jpg";
-// import p6_img from "./6.jpg";
-// import p7_img from "./7.png";
-// import p8_img from "./8.jpg";
-// import p9_img from "./9.jpg";
-// import p11_img from "./11.jpg";
-// import p14_img from "./14.jpg";
-
 let all_product = [
   {
     id: 1,
@@ -23,7 +12,8 @@ let all_product = [
     id: 2,
     name: "Smart Casual Blazer with a Classic Fit",
     category: "mens",
-    image: "https://5.imimg.com/data5/YA/QF/MY-19062938/casual-blazer.jpg",
+    image:
+      "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/18414506/2022/8/9/fe0f6fd9-1de4-445c-b83a-a3ee4afdb66e1660024076806-HERENOW-Men-Blazers-3691660024076130-1.jpg",
     new_price: 65.0,
     old_price: 105.0,
   },
@@ -32,7 +22,7 @@ let all_product = [
     name: "Traditional Ethnic Kurta for Festive Occasions",
     category: "mens",
     image:
-      "https://www.saree.com/media/catalog/product/cache/a2d512490f2b9958e6aa6a0385a10b9a/m/n/mnej2087.jpg",
+      "https://www.tiarastore.co.in/assets/uploads/type/type20230408080457.jpg",
     new_price: 85.0,
     old_price: 125.0,
   },
@@ -50,7 +40,7 @@ let all_product = [
     name: "Trendy Casual Outfit for Modern Men",
     category: "mens",
     image:
-      "https://images.bewakoof.com/uploads/grid/app/casual-outfits-for-men-bewakoof-blog-9-1615892381.jpg",
+      "https://www.apetogentleman.com/wp-content/uploads/2024/05/smart-casual-rules-1.jpg",
     new_price: 85.0,
     old_price: 125.0,
   },
@@ -59,7 +49,7 @@ let all_product = [
     name: "Lightweight Hooded Shirt for Summer Comfort",
     category: "mens",
     image:
-      "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/23289926/2024/8/19/db3dce8d-77fb-4e6f-bbcf-387d01f835111724060661770-KINGDOM-OF-WHITE-Wakai-Cotton-Summer-Hooded-Shirt-4631724060-1.jpg",
+      "https://kingdomofwhite.com/cdn/shop/files/crossway-PDP-2_440x.jpg?v=1749642087",
     new_price: 85.0,
     old_price: 125.0,
   },
@@ -68,7 +58,7 @@ let all_product = [
     name: "Stylish Linen Blazer for Special Events",
     category: "mens",
     image:
-      "https://bananarepublic.gapcanada.ca/webcontent/0057/331/708/cn57331708.jpg",
+      "https://medias.utsavfashion.com/media/catalog/product/cache/1/image/500x/040ec09b1e35df139433887a97daa66f/e/m/embroidered-georgette-blazer-set-in-off-white-v1-mxx1003.jpg",
     new_price: 85.0,
     old_price: 125.0,
   },
