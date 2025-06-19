@@ -163,6 +163,10 @@
 
 /* 📱 Very Small (360px and below) */
 @media (max-width: 360px) {
+   .hero-latest-btn {
+    width: 185px;
+    height: 42px;
+  }
   .loginsignup-container {
     padding: 15px;
   }
